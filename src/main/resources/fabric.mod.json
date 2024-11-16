@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "timbermod",
+	"version": "${version}",
+	"name": "Timber Mod",
+	"description": "Takes down trees all in one go by mining the base",
+	"authors": [
+		"Cordelia"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/timbermod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.cordeliad.timbermod.TimberMod"
+		],
+		"fabric-datagen": [
+			"net.cordeliad.timbermod.TimberModDataGenerator"
+		],
+		"client": [
+			"net.cordeliad.timbermod.TimberModClient"
+		]
+	},
+	"mixins": [
+		"timbermod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.3",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
